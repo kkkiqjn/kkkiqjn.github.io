@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Logger Documentation</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        /* Center the entire content */
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add some margin around the resized image and center it */
+        img {
+            max-width: 350px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Add spacing between sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Style the table */
+        table {
+            width: 80%;
+            margin: 0 auto; /* Center the table horizontally */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Add striped rows */
+        tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Temperature Logger</h1>
+        <hr class="section">
+
+        <!-- Schematic Section -->
+        <h2>Simulation</h2>
+        <img src="images/schematic-image.png" alt="Schematic Diagram" class="img-fluid">
+ <br>
+        <!-- Peripherals Section -->
+        <h2>Peripherals Used</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Peripheral</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Atmega 2560 (Arduino Mega)</td>
+                    <td>Microcontroller Board</td>
+                </tr>
+                <tr>
+                    <td>NTC Temperature Sensor</td>
+                    <td>Measures ambient temperature</td>
+                </tr>
+                <tr>
+                    <td>Micro SD card</td>
+                    <td>Stores temperature data with time</td>
+                </tr>
+                <tr>
+                    <td>Real time clock</td>
+                    <td>Module with I2C interface and 56 bytes of NV SRAM</td>
+                </tr>
+                <tr>
+                    <td>LCD Display</td>
+                    <td>To display temperature</td>
+                </tr>
+                <!-- Add more peripherals here -->
+            </tbody>
+        </table>
+
+        <!-- Details Section -->
+        <h2>Details</h2>
+        <p>
+            This project aims to measure temperature using an NTC (Negative Temperature Coefficient) sensor (also known as a thermistor) every 9 seconds and record the data along with timestamps onto a microSD card. Here’s how it works:
+
+The NTC sensor detects temperature variations, and the real-time clock (RTC) module provides precise timestamps. The Arduino reads temperature data from the sensor and saves it, along with the current time, onto the microSD card. The project utilizes I2C for communication with the RTC module and SPI for the microSD card. NTC temperature sensors find applications in HVAC systems, home appliances, and wireless charging
+        </p>
+
+        <!-- Additional Links -->
+        <div class="text-center section">
+            <a href="https://wokwi.com/projects/390601273007733761" class="btn btn-primary">Wokwi simulation</a>
+            <a href="github-repo" class="btn btn-secondary">GitHub Repository</a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>
